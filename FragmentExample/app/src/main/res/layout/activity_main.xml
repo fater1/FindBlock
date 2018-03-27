@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/contain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_main_tab"
+        >
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_main_tab"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <com.andexert.library.RippleView
+            android:gravity="center"
+            android:id="@+id/rip_sport"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:rv_zoom="true">
+            <TextView
+                android:layout_marginTop="3dp"
+                android:id="@+id/ids"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发现"
+                android:textSize="10sp"
+                android:textColor="@color/red_ff182e_2"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+            <ImageView
+                android:id="@+id/iv_sport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_sport"
+                android:layout_above="@+id/ids"
+                android:layout_centerHorizontal="true" />
+
+        </com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            android:gravity="center"
+            android:id="@+id/welfare_manager"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:rv_zoom="true">
+            <TextView
+                android:layout_marginTop="3dp"
+                android:id="@+id/welfare_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="福利"
+                android:textSize="10sp"
+                android:textColor="@color/white_ccc"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+            <ImageView
+                android:id="@+id/welfare_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_welfare"
+                android:layout_above="@+id/welfare_tv"
+                android:layout_centerHorizontal="true" />
+
+        </com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            android:visibility="gone"
+            android:id="@+id/rip_guess"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="5dp"
+            app:rv_zoom="true">
+            <TextView
+                android:layout_marginTop="3dp"
+                android:id="@+id/ids2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电竞"
+                android:textSize="10sp"
+                android:textColor="@color/white_ccc"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:layout_above="@+id/ids2"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/iv_guess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_guess"
+                />
+        </com.andexert.library.RippleView>
+
+
+        <com.andexert.library.RippleView
+            android:id="@+id/rip_direct"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="5dp"
+            app:rv_zoom="true">
+
+            <TextView
+                android:layout_marginTop="3dp"
+                android:id="@+id/ids1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="竞猜"
+                android:textSize="10sp"
+                android:textColor="@color/white_ccc"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:layout_above="@+id/ids1"
+                android:id="@+id/iv_direct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/main_direct" />
+        </com.andexert.library.RippleView>
+
+
+        <com.andexert.library.RippleView
+            android:id="@+id/rip_my"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="5dp"
+            app:rv_zoom="true">
+
+            <TextView
+                android:layout_marginTop="3dp"
+                android:id="@+id/ids3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的"
+                android:textSize="10sp"
+                android:textColor="@color/white_ccc"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/ids3"
+                android:id="@+id/iv_my"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_my" />
+        </com.andexert.library.RippleView>
+
+    </LinearLayout>
+
+</RelativeLayout>

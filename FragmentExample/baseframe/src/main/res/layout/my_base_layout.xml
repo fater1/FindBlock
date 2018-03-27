@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/daohang"
+        android:gravity="center_vertical"
+        android:theme="@style/MyToolbar"
+        app:contentInsetStart="0dp">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical|left"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:scaleType="center"
+            android:src="@drawable/title_back_icon" />
+
+        <TextView
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical|left"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:scaleType="center"
+            android:text="取消"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:maxLength="8"
+            android:ellipsize="end"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/toolbar_save"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:textColor="#FFFFFF"
+            android:maxLength="8"
+            android:ellipsize="end"
+            android:textSize="16sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+</LinearLayout>

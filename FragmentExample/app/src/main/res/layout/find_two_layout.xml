@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_42"
+                    android:background="@drawable/daohang"
+                    android:fitsSystemWindows="true"
+                    android:gravity="center_vertical"
+                    android:theme="@style/MyToolbar"
+                    android:visibility="visible"
+                    >
+
+                    <ImageView
+                        android:id="@+id/find_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/faxian" />
+
+                    <TextView
+                        android:id="@+id/seach_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_30"
+                        android:text="颜值女神,奇葩主播...一键查找"
+                        android:layout_toRightOf="@+id/find_img"
+                        android:paddingLeft="@dimen/dp_20"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:layout_centerInParent="true"
+                        android:paddingRight="@dimen/dp_20"
+                        android:background="@drawable/bg_corner5_white"
+                        android:textColor="@color/grey_999"
+                        android:textSize="@dimen/sp_14" />
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:padding="10dp"
+                        android:visibility="gone"
+                        android:src="@drawable/sousuo" />
+                </RelativeLayout>
+                <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/findbtscrollview"
+                    app:ptrDrawableStart="@drawable/hb_zdh"
+                    >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    >
+                <include
+                    android:id="@+id/title_content"
+                    android:visibility="invisible"
+                    layout="@layout/head_direct_child"/>
+
+                <bluemobi.cn.esport.view.MyListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:divider="#00000000"
+                    android:dividerHeight="0dip"
+                    android:scrollbars="none"></bluemobi.cn.esport.view.MyListView>
+
+                    <bluemobi.cn.esport.view.MyListView
+                        android:id="@+id/redian_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:paddingLeft="@dimen/dp_15"
+                        android:paddingRight="@dimen/dp_15"
+                        android:divider="@color/white_eee"
+                        android:dividerHeight="1dip"
+                        android:scrollbars="none"></bluemobi.cn.esport.view.MyListView>
+
+                </LinearLayout>
+                </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+            </LinearLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/gg_xf"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/gg_xf_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
+                    android:scaleType="centerCrop"
+                    />
+                <ImageView
+                    android:padding="10dp"
+                    android:id="@+id/quanxiao_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_cross"
+                    />
+            </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>
